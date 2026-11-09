@@ -70,8 +70,14 @@ def render():
             color=winds,
             colorscale=[[0,"#64DD17"],[0.3,"#FFD600"],[0.6,"#FF6D00"],[1.0,"#E53935"]],
             cmin=60, cmax=135,
-            colorbar=dict(title="Wind (kt)", titlefont=dict(color="#8B949E"),
-                          tickfont=dict(color="#8B949E"), x=1.0),
+            colorbar=dict(
+    title=dict(
+        text="Wind (kt)",
+        font=dict(color="#8B949E")
+    ),
+    tickfont=dict(color="#8B949E"),
+    x=1.0,
+),
             showscale=True,
         ),
         text=hours,
